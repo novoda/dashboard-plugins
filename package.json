@@ -1,0 +1,10 @@
+{
+    "name": "dashboard-plugins",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": {},
+    "license": "MIT",
+    "dependencies": {
+        "app-module-path": "^2.2.0"
+    }
+}
