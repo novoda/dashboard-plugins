@@ -1,0 +1,51 @@
+.container {
+    height: 100vh;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://lh3.googleusercontent.com/ZMH1ISWlFvu01-NOmm7Oy1B77-7bPLXpUP-auraUD6SiqesqanaJSbCECCw2MDtYdA9xN0aV59k0gzcnBW9DPHlzr6jHuQFLY1Q6QWeyIFxL8HG27b2FIELnlYp-FD1ZuKsjED4hWkf6lzUgAHuzCsuFS8fMVQ32PSgS5V8Gc_pXUjflB3Zm0RWgGXhqaDBRYHk0yD2spDDa-i7u6SOk2zYHQMPKT63GKbQGnKyw9CWUggfyZnRh-P3gN5BmwruTygcKounPmXK2nilriYzCH4zx0LgmQBC6nd5BA8vPicSB2QdTiEojxpPTHFYYILfThbMT6qky4gnYcYyTYa-IoE3AOf7R6VNu7q6eVAGn4qDI_WhE-_HApw4rtzYz2RmCAGq_wGAuwfjWlLQI8HUzxt1AZNbaml1heOblElS-lfxJuJTEKOZpxIKmpKjwTNq2JPOfGtogZNKjLuS-IVSbY1coMJCxP4dSYJg86ewJiFQzN09i3GVnOCae71KDO0ez6bwAZOUr2UX8lmdtSMh7esouYHOyvcwigJmDdaIAisE78umpAOehTA_x6NuoRLBfy9VWn0XxtAkM5aPjx_s3Krm6Q-Qlb_fMrPzHo9ZRsvQ=w600-h450-no);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;  
+
+}
+
+.gradient {
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;  
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0));
+}
+
+.content {
+    margin-top: 18vh;
+}
+
+.title {
+    font-size: 6vw;    
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.separator {
+    margin-top: 4%;
+    margin-bottom: 6%;
+    background-color: white;
+    height: 0.5vh;
+    width: 100%;
+}
+
+.days {
+    width: 100%;
+    font-size: 6.2vw;
+    font-family: 'Merienda One', cursive;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link rel="stylesheet" href="{{{__dirname}}}/style.css">
+
+<div class="background">
+    <div class="content">
+        <h1 class="text arcade-title">{{gameName}} HIGH SCORES</h1>
+        <ul class="arcade-list">
+            {{#scores}}
+            <li class="arcade-item">
+                <img class="avatar" src={{avatarUrl}}></img>                                
+                <h2 class="left text {{colour}}">{{rank}}</h2>
+                <h2 class="name text {{colour}}">{{name}}</h2>
+                    <h2 class="right text {{colour}}">{{score}}</h2>
+            </li>
+            {{/scores}}
+        </ul>
+    </div>
+</div>

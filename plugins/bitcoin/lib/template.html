@@ -1,0 +1,32 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="{{{__dirname}}}/style.css">
+<div class="container">
+    <div class="values-container">
+        <div class="item">
+            <div>
+                <span class="title">{{{symbol}}}{{currentPrice}}</span>
+            </div>
+            <div>
+                <span class="subtitle">BITCOIN PRICE</span>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="item">
+            <div>
+                <span class="title" style="color: {{textColor}};">{{sign}} {{{symbol}}}{{yesterdayDiff}}</span>
+            </div>
+            <div>
+                <span class="subtitle">SINCE YESTERDAY ({{currency}})</span>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="item">
+            <div>
+                <span class="title" style="color: {{textColor}};">{{sign}} {{yesterdayDiffPercentage}}%</span>
+            </div>
+            <div>
+                <span class="subtitle">SINCE YESTERDAY (%)</span>
+            </div>
+        </div>
+    </div>
+</div>

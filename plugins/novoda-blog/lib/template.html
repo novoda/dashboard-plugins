@@ -1,0 +1,15 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+<link rel="stylesheet" href="{{{__dirname}}}/style.css">
+<div id="root">
+    <div id="content">
+        <img src="{{image}}" />
+        <div>
+            <div id="author">{{author}}</div>
+            <div id="title">{{title}}</div>
+            {{#showDescription}}
+            <div id="description">{{{description}}}</div>
+            {{/showDescription}}
+            <div id="footer"><span id="date">{{date}}</span><span id="plugin-title">Novoda Blog</span></div>    
+        </div>
+    </div>
+</div>

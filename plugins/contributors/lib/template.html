@@ -1,0 +1,28 @@
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+<link rel="stylesheet" href="{{{__dirname}}}/style.css">
+<div class="container">
+    <h1 class="team-contributors">👍 Team Contributors 👍</h1>
+    <div class="team-contributors-container">
+        {{#teamContributors}}
+        <div class="team-contributor">
+            <img class="team-contributor-avatar" src="{{avatar}}" />
+            <div class="team-contributor-info">
+                <h3>{{username}}</h3>
+                <p>{{assignedProjects}} ({{assignedCount}})</p>
+                <p>Others ({{externalCount}})</p>
+            </div>
+        </div>
+        {{/teamContributors}}
+    </div>
+    <hr>
+    <h1 class="project-contributors">😣 Project only Contributors 😣</h1>
+    <div class="project-contributors-container">
+        {{#projectContributors}}
+        <div class="project-contributor">
+            <img class="project-contributor-avatar" src="{{avatar}}" />
+        </div>
+        {{/projectContributors}}
+    </div>
+</div>
+<script src="{{{__dirname}}}/runtime.js"></script>
+

@@ -1,0 +1,11 @@
+{
+  "name": "play-store-review-plugin",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "dashboard-plugin": "file:../dashboard-plugin",
+    "google-play-scraper": "^4.0.0"
+  }
+}

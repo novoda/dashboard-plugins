@@ -1,0 +1,130 @@
+:root {
+    --team-contributor-position: 0;
+    --team-contributor-size: calc(100% / 4);
+}
+
+.container {
+    display: flex;
+    flex: 1 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+  
+hr {
+    border: 3px dashed white;
+    opacity: 0.5;
+    width: 100%;
+}
+  
+.team-contributors, .project-contributors {
+    font-size: 10vmin;
+    text-align: center;
+    margin-top: 1.0vmin;
+    margin-bottom: 0;
+}
+
+.project-contributors-container {
+    display: flex;
+    flex-direction: row;
+  
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.project-contributors {
+    text-align: center;
+    flex-shrink: 1;
+    height: 24vmin;
+
+    margin: 1.5vh;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.project-contributor-avatar {
+    height: 20vmin;
+    border-radius: 25%;
+    margin: 1.5vh;    
+    box-shadow: 0 4vmin 4vmin -30px rgba(0, 0, 0, 0.6);
+  }
+
+  .team-contributors-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    left: calc(var(--team-contributor-position) * var(--team-contributor-size));
+    transition-property: left;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+  }
+
+  .team-contributor {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    height: 20vmin;
+    width: 0;
+  
+    justify-content: flex-start;
+    align-items: center;
+  
+    border-radius: 11px;
+    background-color: white;
+    box-shadow: 0 40px 40px -30px rgba(0, 0, 0, 0.6);
+  
+    padding: 1.5vmin;
+    margin: 15px 0 15px 15px;
+    box-sizing: border-box;
+  
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    flex-basis: var(--team-contributor-size);
+  }
+
+.team-contributor-avatar {
+    border-radius: 25%;
+    max-height: 34vmin;
+}
+
+.team-contributor-info {
+    padding: 1.5vmin;
+    color: black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+
+.team-contributor-info h3 {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    font-size: 4vmin;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+
+    margin-top: 1.0vmin;
+    margin-bottom: 0.5vmin;
+    display: block;
+}
+
+.team-contributor-info p {
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    font-size: 3vmin;
+    font-style: italic;
+    opacity: 0.6;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+
+    margin: 0;
+}

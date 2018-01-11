@@ -1,0 +1,65 @@
+#root {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+}
+
+#content img {
+    margin-top: 1rem;
+    width: 10vw;
+    height: 10vw;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+#content div {
+    margin-left: 1vw;
+    width: 100%;
+}
+
+#author {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+#title {
+    font-size: 9rem;
+    color: #008AA0;
+
+    /* ellipsizing only works on webkit browsers and unlikely to get FF/IE support */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+#description {
+    font-size: 4rem;
+
+    /* ellipsizing only works on webkit browsers and unlikely to get FF/IE support */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+#footer {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+#plugin-title {
+    float: right;
+    color: #C78418;
+    margin-right: 5vw;
+}

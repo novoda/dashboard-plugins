@@ -1,0 +1,12 @@
+{
+  "name": "sonos-plugin",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "dashboard-plugin": "file:../dashboard-plugin",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4"
+  }
+}

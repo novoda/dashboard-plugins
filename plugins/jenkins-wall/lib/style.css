@@ -1,0 +1,44 @@
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	height: 100vh;	
+	background-color: black;
+	box-sizing: border-box;
+	padding: 0.25vw;
+}
+
+.cell {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 5vw;
+	margin: 0.25vw;
+	padding: 1vw 4vw 1vw 4vw;
+}
+
+.cell .name {
+	font-weight: bold;
+	font-size: 1.8vw;
+	white-space: nowrap;
+	color: white;
+	padding-bottom: 0.3vw;
+	font-family: 'Roboto', serif;
+}
+
+.cell .result {
+	font-size: 1vw;
+	white-space: nowrap;
+	color: white;	
+	font-family: 'Roboto', serif;	
+}
+
+.build-success {
+	background-color: #1F487E;
+}
+
+.build-fail {
+	background-color: #C33C54;
+}

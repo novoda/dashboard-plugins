@@ -1,0 +1,10 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="{{{__dirname}}}/style.css">
+<div class="container">
+    {{#jobs}}
+    <div class="cell {{style}}">
+        <span class="name">{{name}}</span>
+        <span class="result">{{totalTests}} tests run, {{failingTests}} tests failed</span>
+    </div>
+    {{/jobs}}
+</div>

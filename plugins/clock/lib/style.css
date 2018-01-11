@@ -1,0 +1,35 @@
+.container {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    height: 100vh;    
+    background-color: #faebd7;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    color: #e9835b;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clock {
+    display: flex;    
+    align-items: center;    
+    font-size: 10rem;
+}
+
+.break {
+    font-size: 4rem;    
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.date {
+    display: inline-block;    
+    margin-left: auto;
+    font-size: 2rem;    
+}
