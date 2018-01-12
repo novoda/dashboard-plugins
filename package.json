@@ -5,9 +5,9 @@
     "repository": {},
     "license": "MIT",
     "scripts": {
-        "postinstall": "minstall plugins --loglevel debug"
+        "postinstall": "minstall plugins --loglevel verbose"
     },
-    "devDependencies": {
+    "dependencies": {
         "minstall": "^2.0.2"
     }
 }
