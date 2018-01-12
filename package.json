@@ -4,6 +4,9 @@
     "main": "index.js",
     "repository": {},
     "license": "MIT",
+    "scripts": {
+        "postinstall": "node install-child-modules"
+    },
     "dependencies": {
         "app-module-path": "^2.2.0"
     }
