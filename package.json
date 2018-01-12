@@ -5,10 +5,9 @@
     "repository": {},
     "license": "MIT",
     "scripts": {
-        "preinstall": "npm install --ignore-scripts",
-        "postinstall": "node install-child-modules"
+        "postinstall": "minstall plugins --loglevel debug"
     },
-    "dependencies": {
-        "app-module-path": "^2.2.0"
+    "devDependencies": {
+        "minstall": "^2.0.2"
     }
 }
