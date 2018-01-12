@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "repository": {},
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dashboard-plugin": "file:../dashboard-plugin"
+  }
 }
