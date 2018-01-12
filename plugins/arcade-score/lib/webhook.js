@@ -3,6 +3,8 @@ const DEFAULT_AVATAR = 'http://www.alfabetajuega.com/abj_public_files/multimedia
 const Jimp = require("jimp");
 
 module.exports = (slackToken, storage, database) => (request, response) => {
+  console.log(Jimp)
+  console.log(WebClient)
   const userId = request.body.originalRequest.data.event.user
   const game = request.body.result.parameters.game
   const score = parseInt(request.body.result.parameters.score)

@@ -1,11 +1,11 @@
 {
-  "name": "bitcoin-plugin",
+  "name": "bitcoin",
   "version": "1.0.0",
   "main": "lib/index.js",
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "request": "^2.81.0",
-    "request-promise-native": "^1.0.4"
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
   }
 }
