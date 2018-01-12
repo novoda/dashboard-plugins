@@ -5,6 +5,7 @@
     "repository": {},
     "license": "MIT",
     "scripts": {
+        "preinstall": "npm install --ignore-scripts",
         "postinstall": "node install-child-modules"
     },
     "dependencies": {
