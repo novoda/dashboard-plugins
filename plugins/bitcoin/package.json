@@ -1,5 +1,5 @@
 {
-  "name": "bitcoin",
+  "name": "bitcoin-plugin",
   "version": "1.0.0",
   "main": "lib/index.js",
   "repository": {},
