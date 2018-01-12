@@ -5,7 +5,6 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "dashboard-plugin": "file:../dashboard-plugin",
     "rss-parser": "^2.11.0"
   }
 }
