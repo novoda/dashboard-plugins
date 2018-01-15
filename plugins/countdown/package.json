@@ -5,6 +5,7 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "moment": "^2.20.1"
+    "moment": "^2.20.1",
+    "dashboard-plugin": "^1.0.0"
   }
 }

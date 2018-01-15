@@ -8,6 +8,17 @@
         "postinstall": "minstall plugins --loglevel verbose"
     },
     "dependencies": {
-        "minstall": "^2.0.2"
+        "minstall": "^3.0.3"
+    },
+    "peerDependencies": {
+        "arcade-score-plugin": "^1.0.0",
+        "bitcoin-plugin": "^1.0.0",
+        "clock-plugin": "^1.0.0",
+        "github-reports-contributors-plugin": "^1.0.0",
+        "countdown-plugin": "^1.0.0",
+        "play-store-review-plugin": "^1.0.0",
+        "jenkins-wall-plugin": "^1.0.0",
+        "novoda-blog-plugin": "^1.0.0",
+        "sonos-plugin": "^1.0.0"
     }
 }

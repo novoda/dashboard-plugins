@@ -5,6 +5,7 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "google-play-scraper": "^4.0.0"
+    "google-play-scraper": "^4.0.0",
+    "dashboard-plugin": "^1.0.0"
   }
 }
