@@ -1,4 +1,4 @@
-const plugin = require('dashboards/plugin').templated
+const plugin = require('dashboard-plugin').templated
 const retrieveLatestNovodaBlog = require('./data-source')
 
 const component = {
