@@ -3,5 +3,21 @@
     "version": "1.0.0",
     "main": "index.js",
     "repository": {},
-    "license": "MIT"
+    "license": "MIT",
+    "scripts": {
+        "preinstall": "node pre-build.js"
+    },
+    "devDependencies": {
+        "fs-extra": "^5.0.0"
+    },
+    "dependencies": {
+        "@slack/client": "^3.15.0",
+        "jimp": "^0.2.28",
+        "dashboards": "git+https://github.com/novoda/dashboards.git",
+        "request": "^2.83.0",
+        "request-promise-native": "^1.0.5",
+        "moment": "^2.20.1",
+        "rss-parser": "^2.11.0",
+        "google-play-scraper": "^4.0.0"
+    }
 }
