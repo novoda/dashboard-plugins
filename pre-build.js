@@ -1,4 +1,4 @@
-const fs = require('fs-extra')
+const fs = require('fs')
 const path = require('path')
 
 const walkPath = './'
@@ -11,7 +11,8 @@ const topLevelDirectories = fs.readdirSync('./')
 
 
 const collectDependencies = (file) => {
-    return fs.readJsonSync(path.join(file, 'package.json')).dependencies
+    const packageFile = fs.readFileSync(path.join(file, 'package.json'))
+    return JSON.parse(packageFile).dependencies
 }
 
 const dependencies = topLevelDirectories.map(collectDependencies)
@@ -37,4 +38,4 @@ const dependencies = topLevelDirectories.map(collectDependencies)
 const packageJson = require('./package.json')
 packageJson.dependencies = dependencies
 
-fs.writeJsonSync('./package.json', packageJson, { spaces: 4 })
+fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, 4))
