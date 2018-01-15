@@ -6,6 +6,6 @@
   "license": "MIT",
   "dependencies": {
     "moment": "^2.20.1",
-    "dashboard-plugin": "^1.0.0"
+    "dashboards": "git+https://github.com/novoda/dashboards.git"
   }
 }

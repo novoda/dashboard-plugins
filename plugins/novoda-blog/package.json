@@ -6,6 +6,6 @@
   "license": "MIT",
   "dependencies": {
     "rss-parser": "^2.11.0",
-    "dashboard-plugin": "^1.0.0"
+    "dashboards": "git+https://github.com/novoda/dashboards.git"
   }
 }

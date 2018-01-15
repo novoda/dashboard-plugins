@@ -8,6 +8,6 @@
     "moment": "^2.20.1",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",
-    "dashboard-plugin": "^1.0.0"
+    "dashboards": "git+https://github.com/novoda/dashboards.git"
   }
 }

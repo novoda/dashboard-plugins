@@ -1,4 +1,4 @@
-const plugin = require('dashboard-plugin').templated
+const plugin = require('dashboards/plugin').templated
 
 const component = {
     template: 'template.html',
