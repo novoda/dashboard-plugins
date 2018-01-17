@@ -7,6 +7,6 @@
   "dependencies": {
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",
-    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.0.tgz?raw=true"
+    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.1.tgz?raw=true"
   }
 }
