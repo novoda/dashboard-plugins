@@ -1,5 +1,5 @@
 {
-  "name": "play-store-review-plugin",
+  "name": "sonar-plugin",
   "version": "1.0.0",
   "main": "lib/index.js",
   "repository": {},
@@ -7,6 +7,6 @@
   "dependencies": {
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",
-    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.1.tgz?raw=true"
+    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.2.tgz?raw=true"
   }
 }
