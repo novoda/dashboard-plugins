@@ -16,15 +16,17 @@ const configuration = () => {
         arcade_score: {
             name: 'Arcade Score',
             template: {
-                game_name: plugin.createStringField('Game name')
+                display_name: plugin.createStringField('Display name'),
+                game_id: plugin.createStringField('Game ID')
             }
         }
     }
 }
 
 const viewStateGenerator = (database) => (configuration) => {
-    const game = configuration.game_name.value
-    return database.ref(`/arcadeScore/${game}/scores/`)
+    const gameId = configuration.game_id.value
+    const displayName = configuration.display_name.value
+    return database.ref(`/arcadeScore/${gameId}/scores/`)
         .orderByChild("score")
         .limitToLast(20)
         .once('value')
@@ -54,7 +56,7 @@ const viewStateGenerator = (database) => (configuration) => {
         })
         .then(scores => {
             return {
-                gameName: game.toUpperCase(),
+                gameName: displayName.toUpperCase(),
                 scores: scoreList(scores)
             }
         })
