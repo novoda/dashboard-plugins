@@ -1,4 +1,4 @@
-const plugin = require('dashboard-plugin').templated
+const plugin = require('dashboard-plugin') 
 
 const component = {
     template: 'template.html',
@@ -74,4 +74,4 @@ const scoreList = (scores) => {
     })
 }
 
-module.exports = (database) => plugin(configuration, component, viewStateGenerator(database))
+module.exports = (database) => plugin.templated(configuration, component, viewStateGenerator(database))

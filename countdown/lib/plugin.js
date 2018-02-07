@@ -1,4 +1,4 @@
-const plugin = require('dashboard-plugin').templated
+const plugin = require('dashboard-plugin')
 const moment = require('moment')
 
 const component = {
@@ -48,4 +48,4 @@ const generateViewState = () => {
     return Promise.resolve(viewState)
 }
 
-module.exports = plugin(configuration, component, generateViewState)
+module.exports = plugin.templated(configuration, component, generateViewState)

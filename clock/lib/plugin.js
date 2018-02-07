@@ -1,4 +1,4 @@
-const plugin = require('dashboard-plugin').templated
+const plugin = require('dashboard-plugin')
 
 const component = {
     template: 'template.html',
@@ -13,4 +13,4 @@ const configuration = () => {
     }
 }
 
-module.exports = plugin(configuration, component)
+module.exports = plugin.templated(configuration, component)

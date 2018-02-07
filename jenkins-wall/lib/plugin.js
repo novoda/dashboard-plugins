@@ -1,4 +1,4 @@
-const plugin = require('dashboard-plugin').templated
+const plugin = require('dashboard-plugin')
 const generateViewState = require('./data-source')
 
 const component = {
@@ -20,4 +20,4 @@ const configuration = () => {
     }
 }
 
-module.exports = plugin(configuration, component, generateViewState)
+module.exports = plugin.templated(configuration, component, generateViewState)

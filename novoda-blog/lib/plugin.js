@@ -1,4 +1,4 @@
-const plugin = require('dashboard-plugin').templated
+const plugin = require('dashboard-plugin')
 const retrieveLatestNovodaBlog = require('./data-source')
 
 const component = {
@@ -14,4 +14,4 @@ const configuration = () => {
     }
 }
 
-module.exports = plugin(configuration, component, retrieveLatestNovodaBlog)
+module.exports = plugin.templated(configuration, component, retrieveLatestNovodaBlog)
