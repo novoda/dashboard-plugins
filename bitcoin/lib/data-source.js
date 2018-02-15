@@ -47,7 +47,7 @@ const toViewState = (rawResponses) => (currency) => {
 
 const getCurrentPriceFormatted = (currentPrice) => {
     const currentPriceString = currentPrice.toFixed(2)
-    return (+currentPriceString).toLocaleString()
+    return (+currentPriceString).toLocaleString('en-GB')
 }
 
 const getYesterdayDiff = (yesterdayPriceResponse) => (currentPrice) => {
