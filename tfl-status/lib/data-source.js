@@ -20,7 +20,7 @@ const lines = {
 }
 
 const readLineStatus = (statuses) => {
-    return statuses.length == 0 ? 'Unknown' : statuses[0].statusSeverityDescription
+    return statuses.length === 0 ? 'Unknown' : statuses[0].statusSeverityDescription
 }
 
 const generateViewState = (configuration) => {
