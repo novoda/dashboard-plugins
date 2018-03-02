@@ -6,9 +6,7 @@ const iosTags = ["ios", "xcode", "swift", "apple", "cocoa pods"]
 
 const generateViewStateFrom = (url) => {
     return parseRss(url)
-        .then(rss => {
-            return rss.feed.entries;
-        })
+        .then(rss => rss.feed.entries)
         .then(toViewState)
 }
 
