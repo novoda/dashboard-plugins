@@ -5,9 +5,11 @@ const androidTags = ["android", "google", "kotlin", "android studio", "gradle"]
 const iosTags = ["ios", "xcode", "swift", "apple", "cocoa pods"]
 
 const generateViewStateFrom = (url) => {
-    return parseRss(url).then(rss => {
-        return rss.feed.entries;
-    }).then(toViewState)
+    return parseRss(url)
+        .then(rss => {
+            return rss.feed.entries;
+        })
+        .then(toViewState)
 }
 
 const parseRss = (url) => {
@@ -19,97 +21,49 @@ const parseRss = (url) => {
 }
 
 const toViewState = (items) => {
-    var mentions = new Map([["android", 0], ["ios", 0], ["cross-platform", 0]])
-    mentions.set("android", counUniqueTagsIn(items, androidTags))
-    mentions.set("ios", counUniqueTagsIn(items, iosTags))
-    mentions.set("cross-platform", counUniqueTagsIn(items, crossPlatformTags))
-        
+    var map = tagsWithUsagesFrom(items)
     return {
-        mostUsedTags: mostUsedTagsFrom(items),
-        crossPlatformMentions: mentions.get("cross-platform"),
-        androidMentions: mentions.get("android"),
-        iosMentions: mentions.get("ios")
+        mostUsedTags: mostUsedTagsFrom(map),
+        crossPlatformMentions: counUniqueTagsIn(map, crossPlatformTags),
+        androidMentions: counUniqueTagsIn(map, androidTags),
+        iosMentions: counUniqueTagsIn(map, iosTags)
     }
 }
 
-function mostUsedTagsFrom(items){
-    return sortMapDescendingByValue(tagsWithUsagesFrom(items))
-        .splice(0,3)
-        .map(tagUsage => tagUsage[0])
+function mostUsedTagsFrom(map) {
+    return Object.keys(map)
+        .map(key => [key, map[key]]) // transforms map into array
+        .sort((firstTag, secondTag) => secondTag[1] - firstTag[1]) // sort array by value
+        .splice(0, 3) // take the first 3 elements
+        .map(tagUsage => tagUsage[0]) // take only the names
         .join(", ")
 }
 
-function tagsWithUsagesFrom(items){
+function tagsWithUsagesFrom(items) {
     var tagsWithUsages = new Map()
 
     items
         .filter(item => item.categories != null)
-        .map(function(item){ return item.categories})
-        .map(function(categories){
-            categories.forEach(category => {
-                if (tagsWithUsages[category] == undefined){
-                    tagsWithUsages[category] = 0
-                } 
-                
-                tagsWithUsages[category] = tagsWithUsages[category]+1                 
-            });
+        .map(item => item.categories)
+        .reduce((prev, curr) => prev.concat(curr))
+        .map(category => {
+            if (tagsWithUsages[category] == undefined) {
+                tagsWithUsages[category] = 0
+            }
+            tagsWithUsages[category] = tagsWithUsages[category] + 1
+
         })
 
     return tagsWithUsages
 }
 
-function sortMapDescendingByValue(obj)
-{
-	var sortable=[];
-	for(var key in obj)
-		if(obj.hasOwnProperty(key))
-			sortable.push([key, obj[key]]);
-	
-	sortable.sort(function(a, b)
-	{
-		var x=a[1],
-			y=b[1];
-		return y<x ? -1 : y>x ? 1 : 0;
-    });
-    
-    return sortable;
-}
-
-function counUniqueTagsIn(items, tags){
-    var mentionCount = 0
-
-    items
-        .filter(item => item.categories != null)
-        .map(function(item){ return item.categories})
-        .map(function(categories){
-            var copyTags = tags.slice()
-            categories.forEach(element => {
-                var category = element.toLowerCase()                
-                mentionCount+= countAndRemoveFoundTags(category, copyTags)
-            });
-        })
-
-    return mentionCount
-}
-
-function countAndRemoveFoundTags(category, tags){
-    var count = 0
-    var catgoryIndex = findIndexForCategoryIn(category, tags)
-    if (catgoryIndex >=0){
-        tags.splice(catgoryIndex, 1)
-        count++
-    }          
-    return count         
-}
-
-function findIndexForCategoryIn(category, tags) {
-    for (var i=tags.length; i--;) {
-        var tag = tags[i].toLowerCase()
-        if (tag.indexOf(category)>=0 || category.indexOf(tag)>=0){
-            break;
-        } 
-    }
-    return i
+function counUniqueTagsIn(map, tags) {
+    return Object.keys(map)
+        .map(key => [key, map[key]]) // transforms map into array
+        .filter((item, pos, rep) => rep.indexOf(item) == pos) // filter unique elements
+        .filter((item, pos) => tags.indexOf(item[0]) > 0) // filter elements that are not in 'tags' array
+        .map(item => item[1]) // take only the values
+        .reduce((accumulator, currentValue) => accumulator + currentValue) // add the values
 }
 
 module.exports = () => generateViewStateFrom('https://www.novoda.com/blog/rss/')
