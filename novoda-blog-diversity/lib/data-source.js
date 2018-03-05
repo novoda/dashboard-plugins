@@ -30,8 +30,6 @@ const toViewState = (items) => {
 }
 
 function mostUsedTagsFrom(map) {
-    console.log("mostUsedTagsFrom")
-    console.log(map)
     return Object.keys(map)
         .map(key => [key, map[key]]) // transforms map into array
         .sort((firstTag, secondTag) => secondTag[1] - firstTag[1]) // sort array by value
