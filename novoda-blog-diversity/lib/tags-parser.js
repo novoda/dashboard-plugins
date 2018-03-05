@@ -29,12 +29,9 @@ module.exports = {
 function findIndexForCategoryIn(category, tags) {
     for (var i = tags.length; i--;) {
         var tag = tags[i].toLowerCase()
-
         if (tag.includes(category) || category.includes(tag)) {
             break;
-        } else {
-            //console.log("NO Match: " + category);
-        }
+        } 
     }
     return i
 }
