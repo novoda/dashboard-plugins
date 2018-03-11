@@ -1,0 +1,12 @@
+{
+  "name": "repo-issues",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^14.0.9",
+    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.3.tgz?raw=true",
+    "moment": "^2.21.0"
+  }
+}

@@ -1,0 +1,47 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="{{{__dirname}}}/style.css">
+
+<div class="container">
+    {{#repos}}
+    <div class="cell">
+        <div class="header">
+            <span class="title">
+                <img class="icon" 
+                    alt="{{language}}" 
+                    src="https://cdn.rawgit.com/konpa/devicon/master/icons/{{language}}/{{language}}-plain.svg"
+                    onerror="this.style.display='none'"/>
+                {{name}}
+            </span>
+            {{^show_details}}
+            <div class="issue">
+                {{#prs.length}}
+                <i class="material-icons is_pr">call_merge</i>
+                <span class="is_pr">{{prs.length}}</span>
+                {{/prs.length}}
+                {{#issues.length}}
+                <i class="material-icons is_issue">bug_report</i>
+                <span class="is_issue">{{issues.length}}</span>
+                {{/issues.length}}
+            </div>
+            {{/show_details}}
+        </div>
+        {{#show_details}}
+            {{#prs}}
+            <div class="issue">
+                <span class="number">#{{number}}&nbsp</span>
+                <span class="title {{issue_style}}">{{title}}&nbsp</span>
+                <span class="updated">{{updated}}</span>
+            </div>
+            {{/prs}} 
+            {{#issues}}
+            <div class="issue">
+                <span class="number">#{{number}}&nbsp</span>
+                <span class="title {{issue_style}}">{{title}}&nbsp</span>
+                <span class="updated">{{updated}}</span>
+            </div>
+            {{/issues}}
+        {{/show_details}}
+    </div>
+    {{/repos}}
+</div>
