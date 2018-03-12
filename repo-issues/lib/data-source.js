@@ -46,7 +46,7 @@ function queryRepoIssues(repo) {
 }
 
 function toRepoIssues(result, repo) {
-    const allitems = { prs: [], issues: [] }
+    const allItems = { prs: [], issues: [] }
 
     result.data
         .filter(each =>
@@ -54,7 +54,7 @@ function toRepoIssues(result, repo) {
             (showIssues && each.pull_request === undefined))
         .sort((a, b) => a.updated_at < b.updated_at)
         .map(toOpenIssue)
-        .map(each => each.is_pr ? allitems.prs.push(each) : allitems.issues.push(each))
+        .map(each => each.is_pr ? allItems.prs.push(each) : allItems.issues.push(each))
 
     return {
         name: repo.name,
@@ -62,8 +62,8 @@ function toRepoIssues(result, repo) {
         language: repo.language,
         private: repo.private,
         pushed_at : repo.pushed_at,
-        issues: allitems.issues,
-        prs: allitems.prs
+        issues: allItems.issues,
+        prs: allItems.prs
     }
 }
 
