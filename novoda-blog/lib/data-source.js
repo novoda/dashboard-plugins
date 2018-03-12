@@ -40,4 +40,4 @@ const formatDateString = (dateString) => {
     return dayNames[realDate.getDay()] + ' ' + realDate.getDate() + ' ' + monthNames[realDate.getMonth()]
 }
 
-module.exports = () => fetchLatestBlogPost('https://www.novoda.com/blog/rss/')
+module.exports = () => fetchLatestBlogPost('https://blog.novoda.com/rss/')
