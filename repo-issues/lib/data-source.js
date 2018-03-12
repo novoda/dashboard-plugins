@@ -75,15 +75,15 @@ function toViewState(repos) {
                 url: repo.html_url,
                 language: toIconName(repo.language),
                 private: repo.private,
-                issues: repo.issues.map(toIssueViewState),
-                prs: repo.prs.map(toIssueViewState),
+                issues: repo.issues.map(addViewStyle),
+                prs: repo.prs.map(addViewStyle),
                 show_details: repos.length < show_details_threshold
             }
         })
     }
 }
 
-function toIssueViewState(issue) {
+function addViewStyle(issue) {
     issue['issue_style'] = issue.is_pr ? 'is_pr' : 'is_issue'
     return issue
 }
