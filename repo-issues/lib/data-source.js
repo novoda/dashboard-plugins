@@ -8,7 +8,7 @@ const languageIconMap = {
     "html": "html5",
     "groovy": "gradle",
     "css": "css3",
-    "objective-c" : "apple"
+    "objective-c": "apple"
 }
 
 let showIssues = false
@@ -19,12 +19,26 @@ const generateViewState = (configuration) => {
     showPRs = configuration.showPRs
 
     octokit.authenticate({type: 'oauth', token: `${configuration.token}`})
-    
-    return octokit.repos.getForOrg({ org: organisation, type: 'all', per_page: 9999 })
-        .then(repos => Promise.all(repos.data.map(queryRepoIssues)))
-        .then(prs => prs.filter(each => each.prs.length > 0 || each.issues.length > 0))
+
+    return paginate(octokit.repos.getForOrg)
+        .then(data => Promise.all(data.map(queryRepoIssues)))
+        .then(repos => repos.filter(each => each.prs.length > 0 || each.issues.length > 0)) // remove repositories with no open prs or issues
+        .then(repos => repos.sort((a, b) => a.pushed_at < b.pushed_at)) // sort repositories by last pushed date
         .then(toViewState)
 }
+
+function paginate(method) {
+    return method({ org: organisation, type: 'public', per_page: 100 })
+        .then(response => {
+            let data = response.data
+            while (octokit.hasNextPage(response)) {
+                return octokit.getNextPage(response).then(response => data.concat(response.data))
+            }
+            return data
+        })
+}
+
+
 
 function queryRepoIssues(repo) {
     return octokit.issues.getForRepo({ owner: organisation, repo: repo.name })
@@ -47,6 +61,7 @@ function toRepoIssues(result, repo) {
         url: repo.html_url,
         language: repo.language,
         private: repo.private,
+        pushed_at : repo.pushed_at,
         issues: allitems.issues,
         prs: allitems.prs
     }
