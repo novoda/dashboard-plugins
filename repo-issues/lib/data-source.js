@@ -2,7 +2,7 @@ const http = require('request-promise-native')
 const moment = require('moment')
 const octokit = require('@octokit/rest')()
 
-const show_detaiils_threshold = 5
+const show_details_threshold = 5
 const organisation = 'novoda'
 const languageIconMap = {
     "html": "html5",
