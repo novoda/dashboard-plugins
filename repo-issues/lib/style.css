@@ -6,6 +6,7 @@
 	box-sizing: border-box;
 	padding: 0.25vw;
 	background: black;
+	font-family: 'Roboto', serif;
 }
 
 .cell {
@@ -23,18 +24,14 @@
 	padding: 2vw 1vw 2vw 1vw;
 	background: white;
 	text-align: center;
-}
-
-.header .title {
-	align-items: center;
-	font-weight: bold;
-	font-size: 2.8vw;
+	font-size: 1.8vw;
+	
 	color: #455A64;
-	font-family: 'Roboto', serif;
+	justify-content: space-between;
 }
 
 .header .icon {
-	max-width: 3vw;
+	max-width: 1.8vw;
 }
 
 .issue {
@@ -42,8 +39,6 @@
 	padding: 1vw 0vw 0vw 1vw;
 	margin-right: 1vw;
 	display: inline-flex;
-	font-family: 'Roboto', serif;
-	font-weight: bold;
 }
 
 .issue .number {
@@ -73,7 +68,6 @@
 	margin: 0.25vw;
 	padding: 1vw 0vw 0vw 1vw;
 	display: inline-flex;
-	font-family: 'Roboto', serif;
 	font-weight: bold;
 	font-size: 1.2vw;
 	text-align: center;
