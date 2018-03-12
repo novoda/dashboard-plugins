@@ -11,8 +11,8 @@ const languageIconMap = {
     "objective-c" : "c"
 }
 
-var showIssues = false
-var showPRs = true
+let showIssues = false
+let showPRs = true
 
 const generateViewState = (configuration) => {
     showIssues = configuration.showIssues
@@ -77,7 +77,7 @@ function toViewState(repos) {
                 private: repo.private,
                 issues: repo.issues.map(toIssueViewState),
                 prs: repo.prs.map(toIssueViewState),
-                show_details: repos.length < show_detaiils_threshold
+                show_details: repos.length < show_details_threshold
             }
         })
     }
