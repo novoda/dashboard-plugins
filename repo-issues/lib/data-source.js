@@ -37,7 +37,7 @@ function toRepoIssues(result, repo) {
     result.data
         .filter(each =>
             (showPRs && each.pull_request !== undefined) ||
-            (showIssues && each.pull_request == undefined))
+            (showIssues && each.pull_request === undefined))
         .sort((a, b) => a.updated_at < b.updated_at)
         .map(toOpenIssue)
         .map(each => each.is_pr ? allitems.prs.push(each) : allitems.issues.push(each))
@@ -91,7 +91,7 @@ function toIssueViewState(issue) {
 function toIconName(language) {
     const lang = language ? language.toLowerCase() : ''
     const icon = languageIconMap[lang]
-    return icon == undefined ? lang : icon
+    return icon === undefined ? lang : icon
 }
 
 module.exports = generateViewState
