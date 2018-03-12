@@ -8,7 +8,7 @@ const languageIconMap = {
     "html": "html5",
     "groovy": "gradle",
     "css": "css3",
-    "objective-c" : "c"
+    "objective-c" : "apple"
 }
 
 let showIssues = false
