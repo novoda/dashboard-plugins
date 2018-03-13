@@ -59,7 +59,7 @@ function toRepoIssues(result, repo) {
         url: repo.html_url,
         language: repo.language,
         private: repo.private,
-        pushed_at : repo.pushed_at,
+        pushed_at: repo.pushed_at,
         issues: allItems.issues,
         prs: allItems.prs
     }
