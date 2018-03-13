@@ -1,0 +1,84 @@
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	height: 100vh;	
+	box-sizing: border-box;
+	padding: 0.25vw;
+	background: black;
+	font-family: 'Roboto', serif;
+}
+
+.cell {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 5vw;
+	margin: 0.25vw;
+	background-color: #ECEFF1;
+}
+
+.cell .header {
+	white-space: nowrap;
+	flex-direction: row;   
+	padding: 2vw 1vw 2vw 1vw;
+	background: white;
+	text-align: center;
+	font-size: 1.8vw;
+	
+	color: #455A64;
+	justify-content: space-between;
+}
+
+.header .icon {
+	max-width: 1.8vw;
+}
+
+.issue {
+	flex-direction: row;
+	padding: 1vw 0vw 0vw 1vw;
+	margin-right: 1vw;
+	display: inline-flex;
+}
+
+.issue .number {
+	font-weight: bold;
+	justify-content: left;
+	align-items: left;
+	color: #455A64;
+	padding-bottom: 0.3vw;
+}
+
+.issue .title {
+	font-weight: bold;
+	justify-content: left;
+	align-items: left;
+	padding-bottom: 0.3vw;
+}
+
+.issue .updated {
+	justify-content: left;
+	align-items: left;
+	color: #90A4AE;
+	padding-bottom: 0.3vw;
+}
+
+.issue_summary {
+	flex-direction: row;
+	margin: 0.25vw;
+	padding: 1vw 0vw 0vw 1vw;
+	display: inline-flex;
+	font-weight: bold;
+	font-size: 1.2vw;
+	text-align: center;
+	justify-content: center;
+	padding-bottom: 0.3vw;
+}
+
+.is_issue {
+	color: #C33C54;
+}
+
+.is_pr {  
+	color: #009688;
+}
