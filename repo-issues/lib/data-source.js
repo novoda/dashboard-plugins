@@ -38,8 +38,6 @@ function paginate(method) {
         })
 }
 
-
-
 function queryRepoIssues(repo) {
     return octokit.issues.getForRepo({ owner: organisation, repo: repo.name })
         .then(result => toRepoIssues(result, repo))
