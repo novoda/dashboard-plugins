@@ -5,7 +5,7 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "moment": "^2.20.1",
+    "moment": "^2.22.0",
     "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.4.tgz?raw=true"
   }
 }
