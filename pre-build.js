@@ -12,16 +12,22 @@ const topLevelDirectories = fs.readdirSync('./')
 
 const collectDependencies = (file) => {
     const packageFile = fs.readFileSync(path.join(file, 'package.json'))
-    return JSON.parse(packageFile).dependencies
+    return { 
+        location: file,
+        dependencies: JSON.parse(packageFile).dependencies
+     }
 }
 
 const dependencies = topLevelDirectories.map(collectDependencies)
-    .map(dependenciesBlock => {
+    .map(each => {
+        const dependenciesBlock  = each.dependencies
+        const location = each.location
         return Object.keys(dependenciesBlock).map(key => {
             const version = dependenciesBlock[key]
             return {
                 name: key,
                 version: version,
+                location
             }
         })
     }).reduce((accumulator, current) => {
@@ -30,7 +36,7 @@ const dependencies = topLevelDirectories.map(collectDependencies)
     .reduce((accumulator, current) => {
         const cached = accumulator[current.name]
         if (cached && cached !== current.version) {
-            console.log('conflict with', current.name, 'using:', cached, 'instead of', current.version)
+            console.log('conflict in', current.location, 'with', current.name, 'using:', cached, 'instead of', current.version)
             console.log('\n')
             return accumulator
         }
