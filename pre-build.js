@@ -30,7 +30,9 @@ const dependencies = topLevelDirectories.map(collectDependencies)
     .reduce((accumulator, current) => {
         const cached = accumulator[current.name]
         if (cached && cached !== current.version) {
-            console.log('conflict', cached, 'using:', current.name, current.version)
+            console.log('conflict with', current.name, 'using:', cached, 'instead of', current.version)
+            console.log('\n')
+            return accumulator
         }
         return accumulator[current.name] = current.version, accumulator
     }, {})
