@@ -13,7 +13,7 @@ const configuration = () => {
             template: {
                 showIssues: false,
                 showPRs: true,
-                token : "Github Token"
+                token : plugin.createStringField('github token'),
             }
         }
     }
