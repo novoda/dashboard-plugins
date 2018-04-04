@@ -10,9 +10,9 @@ const languageIconMap = {
     "objective-c": "apple"
 }
 
-let showIssues = false
-let showPRs = true
-let show_details_threshold = 5
+let showIssues
+let showPRs
+let show_details_threshold
 
 const generateViewState = (configuration) => {
     showIssues = configuration.showIssues === 'true'
