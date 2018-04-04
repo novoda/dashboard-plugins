@@ -15,11 +15,11 @@ let showPRs
 let show_details_threshold
 
 const generateViewState = (configuration) => {
-    showIssues = configuration.showIssues === 'true'
-    showPRs = configuration.showPRs === 'true'
-    show_details_threshold = parseInt(configuration.showDetailsThreshold, 10)
+    showIssues = configuration.showIssues.value === 'true'
+    showPRs = configuration.showPRs.value === 'true'
+    show_details_threshold = parseInt(configuration.showDetailsThreshold.value, 10)
 
-    octokit.authenticate({type: 'oauth', token: `${configuration.token}`})
+    octokit.authenticate({type: 'oauth', token: configuration.token.value})
 
     return paginate(octokit.repos.getForOrg)
         .then(data => Promise.all(data.map(queryRepoIssues)))
