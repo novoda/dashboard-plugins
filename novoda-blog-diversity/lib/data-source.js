@@ -38,4 +38,4 @@ function mostUsedTagsFrom(map) {
         .join(", ")
 }
 
-module.exports = () => generateViewStateFrom('https://www.novoda.com/blog/rss/')
+module.exports = () => generateViewStateFrom('https://blog.novoda.com/rss/')
