@@ -2,7 +2,6 @@ const http = require('request-promise-native')
 const moment = require('moment')
 const octokit = require('@octokit/rest')()
 
-const show_details_threshold = 5
 const organisation = 'novoda'
 const languageIconMap = {
     "html": "html5",
@@ -11,12 +10,14 @@ const languageIconMap = {
     "objective-c": "apple"
 }
 
-let showIssues = false
-let showPRs = true
+let showIssues
+let showPRs
+let show_details_threshold
 
 const generateViewState = (configuration) => {
-    showIssues = configuration.showIssues
-    showPRs = configuration.showPRs
+    showIssues = configuration.showIssues === 'true'
+    showPRs = configuration.showPRs === 'true'
+    show_details_threshold = parseInt(configuration.showDetailsThreshold, 10)
 
     octokit.authenticate({type: 'oauth', token: `${configuration.token}`})
 

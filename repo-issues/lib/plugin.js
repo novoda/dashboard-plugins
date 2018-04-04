@@ -11,8 +11,9 @@ const configuration = () => {
         "repo-issues": {
             name: 'repo-issues',
             template: {
-                showIssues: false,
-                showPRs: true,
+                showIssues: plugin.createStringField('show issues? true|false'),
+                showPRs: plugin.createStringField('show pull requests? true|false'),
+                showDetailsThreshold : plugin.createStringField('max number of results to show details'),
                 token : plugin.createStringField('github token'),
             }
         }
