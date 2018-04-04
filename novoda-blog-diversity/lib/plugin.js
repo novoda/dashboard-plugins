@@ -8,7 +8,7 @@ const component = {
 
 const configuration = () => {
     return {
-        "blog-diversity-dashboard-plugin": {
+        novoda_blog_diversity: {
             name: 'Novoda Blog Diversity Dashboard'
         }
     }
