@@ -4,12 +4,13 @@
     const array = Array.from(metaTags)
     const competitionId = array.filter(tag => { return tag.getAttribute("name") === "competitionId" }).map(element => element.getAttribute("content"))[0]
     const matchDay = array.filter(tag => { return tag.getAttribute("name") === "matchDay" }).map(element => element.getAttribute("content"))[0]
+    const authToken = array.filter(tag => { return tag.getAttribute("name") === "authToken" }).map(element => element.getAttribute("content"))[0]
 
     const fetchFixtures = (competitionId) => {
         const request = {
             mode:'cors',
             headers: {
-                'X-Auth-Token': 'f7ed7ab3066343fd897113e9d281e1f2', 'X-Response-Control': 'minified'
+                'X-Auth-Token': authToken, 'X-Response-Control': 'minified'
             }
         }
         return fetch(`http://api.football-data.org/v1/competitions/${competitionId}/fixtures`, request).then(response => response.json())
