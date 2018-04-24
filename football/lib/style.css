@@ -12,7 +12,6 @@
     text-rendering: optimizeLegibility;
     line-height: initial;
     font-size: 15px;
-    /*border: 3px solid yellow;*/
 }
 
 .score {
@@ -25,7 +24,6 @@
     line-height: initial;
     font-size: 25px;
     color: white;
-    /*border: 3px solid yellow;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +38,6 @@
     line-height: initial;
     font-size: 15px;
     color: white;
-    /*border: 3px solid red;*/
 }
 
 .scoreDivisor {
@@ -96,7 +93,6 @@
     text-align: center;
     color: #ffffff;
     word-break: break-word;
-    /*border: 3px solid red;*/
     vertical-align: middle;
     display: flex;
     justify-content: center;
@@ -108,7 +104,6 @@
 .teamsContainer, .scoreContainer {
     display: flex;
     margin: auto;
-    /*border: 3px solid green;*/
     text-align: justify;
     width: 20em;
 }
@@ -116,7 +111,6 @@
 .extraTimeScoreContainer {
     display: flex;
     margin: auto;
-    /*border: 3px solid green;*/
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -203,7 +197,6 @@
 .teamFlag {
     font-size: 30px;
     padding: 0 10px 0 10px;
-    /*border: 3px solid yellow;*/
     width: 100%;
     text-align: center;
     overflow: auto;
@@ -217,12 +210,10 @@ ul {
     flex-flow: wrap column;
     max-height: 40em;
     -webkit-padding-start: 0px;
-    /*border: 3px solid yellow;*/
 }
 
 li {
     page-break-inside: avoid;
-    /*border: 3px solid green;*/
     display: flex;
     justify-content: space-around;
 }
