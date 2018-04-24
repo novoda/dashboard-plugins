@@ -1,0 +1,228 @@
+.container {
+    height: 100vh;
+    background-image: linear-gradient(to bottom,#0e3877,#2B71B1);
+}
+
+.matchStatus {
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: initial;
+    font-size: 15px;
+    /*border: 3px solid yellow;*/
+}
+
+.score {
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: initial;
+    font-size: 25px;
+    color: white;
+    /*border: 3px solid yellow;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extraTimeScore {
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: initial;
+    font-size: 15px;
+    color: white;
+    /*border: 3px solid red;*/
+}
+
+.scoreDivisor {
+    padding: 0 5px;
+}
+
+.halfScore {
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: initial;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.date {
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: initial;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.competition {
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: initial;
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+.homeTeam, .awayTeam, .matchDay {
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    word-break: break-word;
+    /*border: 3px solid red;*/
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 0px 10px;
+    width: 7em;
+}
+
+.teamsContainer, .scoreContainer {
+    display: flex;
+    margin: auto;
+    /*border: 3px solid green;*/
+    text-align: justify;
+    width: 20em;
+}
+
+.extraTimeScoreContainer {
+    display: flex;
+    margin: auto;
+    /*border: 3px solid green;*/
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+}
+
+.circleBase {
+    border-radius: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    background: mediumspringgreen;
+}
+
+.circleBaseRed {
+    border-radius: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    background: orangered;
+}
+
+.dotContainer {
+    padding: 0 1px;
+}
+
+.penaltiesDiv {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.penalties {
+    display: flex;
+    text-align: center;
+    padding: 5px;
+}
+
+.vs {
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    line-height: initial;
+    font-size: 15px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.matchContainer {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #00063a;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: column;
+    width: 20em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.matchList {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.teamFlag {
+    font-size: 30px;
+    padding: 0 10px 0 10px;
+    /*border: 3px solid yellow;*/
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+}
+
+ul {
+    display: -ms-flexbox;           /* IE 10 */
+    display: -webkit-flex;          /* Safari 6.1+. iOS 7.1+ */
+    display: flex;
+    -webkit-flex-flow: wrap column; /* Safari 6.1+ */
+    flex-flow: wrap column;
+    max-height: 40em;
+    -webkit-padding-start: 0px;
+    /*border: 3px solid yellow;*/
+}
+
+li {
+    page-break-inside: avoid;
+    /*border: 3px solid green;*/
+    display: flex;
+    justify-content: space-around;
+}
