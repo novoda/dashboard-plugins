@@ -10,7 +10,9 @@ const configuration = () => {
     return {
         "football-plugin": {
             name: 'football-plugin',
-            template: { }
+            template: {
+                competition: plugin.createStringField('competition')
+            }
         }
     }
 }
