@@ -2,7 +2,7 @@ const http = require('request-promise-native')
 
 const fetchCompetition = (competitionId, authToken) => {
     const request = {
-        url: `http://api.football-data.org/v1/competitions/${competitionId}`,
+        url: `https://api.football-data.org/v1/competitions/${competitionId}`,
         headers: {
             'X-Auth-Token': authToken, 'X-Response-Control': 'minified'
         }
