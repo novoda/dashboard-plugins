@@ -13,7 +13,7 @@
                 'X-Auth-Token': authToken, 'X-Response-Control': 'minified'
             }
         }
-        return fetch(`http://api.football-data.org/v1/competitions/${competitionId}/fixtures`, request).then(response => response.json())
+        return fetch(`https://api.football-data.org/v1/competitions/${competitionId}/fixtures`, request).then(response => response.json())
     }
 
     const generateViewState = (competitionId) => {
