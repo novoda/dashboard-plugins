@@ -11,7 +11,8 @@ const configuration = () => {
         "football-plugin": {
             name: 'football-plugin',
             template: {
-                competitionId: plugin.createStringField('competition')
+                competitionId: plugin.createStringField('Competition ID'),
+                authToken: plugin.createStringField('Auth Token')
             }
         }
     }
