@@ -38,15 +38,6 @@ const updateData = (cache, configuration, pluginInstanceId) => {
 }
 
 const viewStateProvider = (cache) => (configuration, pluginInstanceId) => {
-    // if (cache.hasExpired(pluginInstanceId)) {
-    //     console.log('Cache miss. Writing to cache...')
-    //     return generateViewState(configuration)
-    //         .then((data) => {
-    //             cache.save(pluginInstanceId, data)
-    //             return data
-    //         })
-    // }
-    // return cache.read(pluginInstanceId)
     return updateData(cache, configuration, pluginInstanceId)
 }
 
