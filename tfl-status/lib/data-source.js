@@ -23,15 +23,7 @@ const readLineStatus = (statuses) => {
     return statuses.length === 0 ? 'Unknown' : statuses[0].statusSeverityDescription
 }
 
-const generateViewState = (configuration) => {
-    const appId = configuration.app_id.value
-    const appKey = configuration.app_key.value
-
-    const options = {
-        url: `https://api.tfl.gov.uk/Line/Mode/tube%2Coverground/Status?app_id=${appId}&app_key=${appKey}`,
-        json: true
-    }
-
+const fetch = (options) => {
     return http.get(options).then((response) => {
         return response.map(each => {
             return {
@@ -41,6 +33,16 @@ const generateViewState = (configuration) => {
             }
         })
     })
+}
+
+const generateViewState = (configuration) => {
+    const appId = configuration.app_id.value
+    const appKey = configuration.app_key.value
+    const options = {
+        url: `https://api.tfl.gov.uk/Line/Mode/tube%2Coverground/Status?app_id=${appId}&app_key=${appKey}`,
+        json: true
+    }
+    return fetch(options)
 }
 
 module.exports = generateViewState
