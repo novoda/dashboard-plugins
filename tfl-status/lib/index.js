@@ -1,3 +1,3 @@
 module.exports = {
-    plugin: (dependencies) => require('./plugin')(dependencies.cache)
+    plugin: (dependencies) => require('./plugin')(dependencies.database())
 }
