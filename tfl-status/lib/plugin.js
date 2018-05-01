@@ -14,7 +14,7 @@ const configuration = () => {
             name: 'TfL Status',
             template: {
                 app_id: plugin.createStringField('TfL API App ID'),
-                app_key: plugin.createStringField('TfL API App Key ')
+                app_key: plugin.createStringField('TfL API App Key')
             }
         }
     }
