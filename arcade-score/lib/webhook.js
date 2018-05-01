@@ -11,7 +11,7 @@ module.exports = (slackToken, storage, database) => (request, response) => {
 
   const web = new WebClient(slackToken)
 
-  web.users.info(userId).then((response) => {
+  web.users.info({ user: userId }).then((response) => {
     const user = response.user
     const avatarUrl = user.profile.image_512 || user.profile.image_192 || user.profile.image_72 || DEFAULT_AVATAR
     const bucket = storage.bucket()
