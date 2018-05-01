@@ -1,0 +1,16 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="{{{__dirname}}}/style.css">
+<Head>
+    <meta charSet="utf-8" />
+    <meta name="competitionId" content={{competitionId}} />
+    <meta name="authToken" content={{authToken}} />
+    <meta name="matchDay" content={{matchDay}} />
+</Head>
+<div class="container">
+    <div class="header">
+        <span class="competition">{{competition}}</span>
+        <span class="matchDay">ROUND {{matchDay}}/{{totalMatchDays}}</span>
+    </div>
+    <ul id="matchList"/>
+</div>
+<script src="{{{__dirname}}}/runtime.js"/>

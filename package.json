@@ -8,9 +8,9 @@
         "preinstall": "node pre-build.js"
     },
     "dependencies": {
-        "@slack/client": "^3.15.0",
-        "jimp": "^0.2.28",
+        "@slack/client": "^4.2.0",
         "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.7.tgz?raw=true",
+        "jimp": "^0.2.28",
         "request": "^2.83.0",
         "request-promise-native": "^1.0.5",
         "moment": "^2.22.0",
