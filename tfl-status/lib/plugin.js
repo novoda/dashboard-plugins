@@ -21,7 +21,6 @@ const configuration = () => {
 }
 
 const viewStateProvider = (database) => (configuration, meta) => {
-    const generateViewState = require('./data-source')
     return plugin.cache(database, meta.id, REFRESH_INTERVAL_MILLIS, () => generateViewState(configuration))
 }
 
