@@ -1,6 +1,8 @@
 const plugin = require('dashboard-plugin')
 const generateViewState = require('./data-source')
 
+const REFRESH_INTERVAL_MILLIS = 2 * 60 * 1000
+
 const component = {
     template: 'template.html',
     __dirname
@@ -9,13 +11,17 @@ const component = {
 const configuration = () => {
     return {
         "tfl-status": {
-            name: 'TFL Status',
+            name: 'TfL Status',
             template: {
-                app_id: plugin.createStringField('Tfl Api App ID'),
-                app_key: plugin.createStringField('Tfl Api App Key')
+                app_id: plugin.createStringField('TfL API App ID'),
+                app_key: plugin.createStringField('TfL API App Key')
             }
         }
     }
 }
 
-module.exports = plugin.templated(configuration, component, generateViewState)
+const viewStateProvider = (database) => (configuration, meta) => {
+    return plugin.cache(database, meta.id, REFRESH_INTERVAL_MILLIS, () => generateViewState(configuration))
+}
+
+module.exports = (database) => plugin.templated(configuration, component, viewStateProvider(database))
