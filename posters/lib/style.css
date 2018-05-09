@@ -1,0 +1,32 @@
+body {
+    overflow: hidden;
+}
+
+.background {
+    z-index: -1;
+    position: absolute;
+    filter: blur(20px) brightness(0.45);      
+    width: 150%;
+    height: 150vh;
+    object-fit: cover;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   
+}
+
+.image {
+    height: 70vh;
+}
+
+img {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+img[data-src] {
+    opacity: 0;
+}
