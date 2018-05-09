@@ -11,8 +11,7 @@ const configuration = () => {
         "posters": {
             name: 'posters',
             template: {
-                foo: plugin.createStringField('Foo name for admin panel'),
-                bar: plugin.createStringField('Bar name for admin panel')
+                images: plugin.createStringField('Comma separated image urls'),
             }
         }
     }
