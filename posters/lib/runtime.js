@@ -1,6 +1,8 @@
-[].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
-    img.setAttribute('src', img.getAttribute('data-src'));
-    img.onload = function() {
+(function () {
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    img.setAttribute('src', img.getAttribute('data-src'))
+    img.onload = () => {
       img.removeAttribute('data-src');
-    };
-  });
+    }
+  })
+})()
