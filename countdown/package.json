@@ -1,11 +1,21 @@
 {
-  "name": "countdown-plugin",
+  "name": "countdown",
   "version": "1.0.0",
   "main": "lib/index.js",
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "moment": "^2.22.0",
-    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.8.tgz?raw=true"
+    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.7.tgz?raw=true",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "directories": {
+    "test": "test"
   }
 }
