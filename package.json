@@ -9,13 +9,13 @@
     },
     "dependencies": {
         "@slack/client": "^4.2.0",
-        "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.8.tgz?raw=true",
+        "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
         "jimp": "^0.2.28",
         "request": "^2.83.0",
         "request-promise-native": "^1.0.5",
         "moment": "^2.22.0",
         "rss-parser": "^2.11.0",
-        "google-play-scraper": "^4.0.0",
+        "google-play-scraper": "^6.2.0",
         "@octokit/rest": "^14.0.9"
     }
 }
