@@ -5,6 +5,13 @@ const generateViewState = (configuration) => {
     const minimumRating = configuration.minimum_rating.value
     return Promise.all([fetchListing(packageName), fetchReviews(packageName)]).then(result => {
         return toViewState(minimumRating, result[0], result[1])
+    }).catch(error => {
+        console.error(error)
+        return {
+            title: '',
+            text: 'No reviews available',
+            image: ''
+        }
     })
 }
 
