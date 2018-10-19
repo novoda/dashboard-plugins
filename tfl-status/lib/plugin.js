@@ -1,7 +1,7 @@
 const plugin = require('dashboard-plugin')
 const generateViewState = require('./data-source')
 
-const REFRESH_INTERVAL_MILLIS = 2 * 60 * 1000
+const REFRESH_INTERVAL_MILLIS = (2 * 60) * 1000
 
 const component = {
     template: 'template.html',
