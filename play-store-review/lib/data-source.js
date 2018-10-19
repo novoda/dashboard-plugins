@@ -5,7 +5,7 @@ const generateViewState = (configuration) => {
     const minimumRating = configuration.minimum_rating.value
     return Promise.all([fetchListing(packageName), fetchReviews(packageName)]).then(result => {
         return toViewState(minimumRating, result[0], result[1])
-    }).catch(console.log)
+    })
 }
 
 const fetchListing = (appId) => {
@@ -25,17 +25,17 @@ const toViewState = (minimumRating, listing, reviews) => {
     const filteredReviews = reviews.filter(review => review.score >= minimumRating);
     if (filteredReviews.length === 0) {
         return {
-            title: listing.title,
+            title: listing.title || '',
             text: 'No reviews available',
-            image: `https:${listing.icon}`
+            image: listing.icon || ''
         }
     }
 
     const review = filteredReviews[Math.floor(Math.random() * filteredReviews.length)];
     return {
         rating: `${'★'.repeat(review.score)}${'☆'.repeat(5 - review.score)}`,
-        text: review.text,
-        image: listing.icon
+        text: review.text || '',
+        image: listing.icon || ''
     }
 }
 
