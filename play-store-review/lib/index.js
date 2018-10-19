@@ -1,3 +1,3 @@
 module.exports = {
-    plugin: (database) => require('./plugin')(database)
+    plugin: (dependencies) => require('./plugin')(dependencies.database())
 }

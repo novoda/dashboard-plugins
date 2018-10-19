@@ -1,5 +1,7 @@
 const plugin = require('dashboard-plugin')
 const generateViewState = require('./data-source')
+const REFRESH_INTERVAL_MILLIS = (5 * 60) * 1000
+
 
 const component = {
     template: 'template.html',
@@ -18,4 +20,8 @@ const configuration = () => {
     }
 }
 
-module.exports = (database) => plugin.templated(configuration, component, generateViewState(database))
+const viewStateProvider = (database) => (configuration, meta) => {
+    return plugin.cache(database, meta.id, 1, () => generateViewState(configuration))
+}
+
+module.exports = (database) => plugin.templated(configuration, component, viewStateProvider(database))

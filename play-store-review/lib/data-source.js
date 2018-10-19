@@ -1,18 +1,28 @@
-const repository = require('./review-repository')
-const REFRESH_REVIEWS_INTERVAL = (60 * 1000) * 30
+const googlePlay = require('google-play-scraper')
 
-const generateViewState = (database) => (configuration) => {
+const generateViewState = (configuration) => {
     const packageName = configuration.package_name.value
     const minimumRating = configuration.minimum_rating.value
-    return repository.fetchLatest(database)(packageName, REFRESH_REVIEWS_INTERVAL)
-        .then(result => {
-            return toViewState(minimumRating, result.listing, result.reviews)
-        }).catch(console.log)
+    return Promise.all([fetchListing(packageName), fetchReviews(packageName)]).then(result => {
+        return toViewState(minimumRating, result[0], result[1])
+    }).catch(console.log)
+}
+
+const fetchListing = (appId) => {
+    return googlePlay.app({ appId: appId, throttle: 1 })
+}
+
+const fetchReviews = (appId) => {
+    return googlePlay.reviews({
+        appId: appId,
+        page: 0,
+        sort: googlePlay.sort.NEWEST,
+        throttle: 1
+    })
 }
 
 const toViewState = (minimumRating, listing, reviews) => {
     const filteredReviews = reviews.filter(review => review.score >= minimumRating);
-
     if (filteredReviews.length === 0) {
         return {
             title: listing.title,
@@ -25,7 +35,7 @@ const toViewState = (minimumRating, listing, reviews) => {
     return {
         rating: `${'★'.repeat(review.score)}${'☆'.repeat(5 - review.score)}`,
         text: review.text,
-        image: `https:${listing.icon}`
+        image: listing.icon
     }
 }
 

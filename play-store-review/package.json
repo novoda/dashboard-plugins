@@ -5,7 +5,7 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "google-play-scraper": "^4.0.0",
-    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.8.tgz?raw=true"
+    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
+    "google-play-scraper": "^6.2.0"
   }
 }
