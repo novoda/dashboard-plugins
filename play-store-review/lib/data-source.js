@@ -3,6 +3,7 @@ const googlePlay = require('google-play-scraper')
 const generateViewState = (configuration) => {
     const packageName = configuration.package_name.value
     const minimumRating = configuration.minimum_rating.value
+    console.log("!!! config: ", configuration)
     return Promise.all([fetchListing(packageName), fetchReviews(packageName)]).then(result => {
         return toViewState(minimumRating, result[0], result[1])
     }).catch(error => {
@@ -25,6 +26,9 @@ const fetchReviews = (appId) => {
         page: 0,
         sort: googlePlay.sort.NEWEST,
         throttle: 1
+    }).catch(error =>{
+        console.error(error)
+        return []
     })
 }
 
