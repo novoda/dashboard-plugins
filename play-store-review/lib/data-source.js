@@ -1,3 +1,7 @@
+process.env.DEBUG = "google-play-scraper"
+
+console.log(process.env)
+
 const googlePlay = require('google-play-scraper')
 
 const generateViewState = (configuration) => {

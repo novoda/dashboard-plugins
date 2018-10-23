@@ -1,5 +1,3 @@
-process.env.DEBUG="google-play-scraper"
-
 const plugin = require('dashboard-plugin')
 const generateViewState = require('./data-source')
 const REFRESH_INTERVAL_MILLIS = (5 * 60) * 1000
