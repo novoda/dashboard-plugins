@@ -1,3 +1,7 @@
+process.env.DEBUG = "google-play-scraper"
+
+console.log(process.env)
+
 const googlePlay = require('google-play-scraper')
 
 const generateViewState = (configuration) => {
@@ -5,6 +9,13 @@ const generateViewState = (configuration) => {
     const minimumRating = configuration.minimum_rating.value
     return Promise.all([fetchListing(packageName), fetchReviews(packageName)]).then(result => {
         return toViewState(minimumRating, result[0], result[1])
+    }).catch(error => {
+        console.error(error)
+        return {
+            title: '',
+            text: 'No reviews available',
+            image: ''
+        }
     })
 }
 
@@ -18,6 +29,9 @@ const fetchReviews = (appId) => {
         page: 0,
         sort: googlePlay.sort.NEWEST,
         throttle: 1
+    }).catch(error =>{
+        console.error(error)
+        return []
     })
 }
 

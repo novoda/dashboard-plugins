@@ -21,7 +21,7 @@ const configuration = () => {
 }
 
 const viewStateProvider = (database) => (configuration, meta) => {
-    return plugin.cache(database, meta.id, 1, () => generateViewState(configuration))
+    return plugin.cache(database, meta.id, REFRESH_INTERVAL_MILLIS, () => generateViewState(configuration))
 }
 
 module.exports = (database) => plugin.templated(configuration, component, viewStateProvider(database))
