@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@slack/client": "^4.2.0",
-    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.8.tgz?raw=true",
+    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
     "jimp": "^0.2.28"
   }
 }
