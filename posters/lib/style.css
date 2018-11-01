@@ -6,9 +6,10 @@ body {
     z-index: -1;
     position: absolute;
     filter: blur(20px) brightness(0.45);      
-    width: 150%;
-    height: 150vh;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
+    transform: scale(1.5)
 }
 
 .center {
