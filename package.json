@@ -13,7 +13,7 @@
         "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
         "google-play-scraper": "^6.2.2",
         "jimp": "^0.6.0",
-        "moment": "^2.22.0",
+        "moment": "^2.23.0",
         "national-rail-darwin": "^1.0.8",
         "request": "^2.88.0",
         "request-promise-native": "^1.0.5",
