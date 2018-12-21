@@ -17,6 +17,6 @@
         "national-rail-darwin": "^1.0.8",
         "request": "^2.88.0",
         "request-promise-native": "^1.0.5",
-        "rss-parser": "^2.11.0"
+        "rss-parser": "^3.6.0"
     }
 }
