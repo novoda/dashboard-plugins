@@ -9,7 +9,7 @@
     },
     "dependencies": {
         "@octokit/rest": "^14.0.9",
-        "@slack/client": "^4.2.0",
+        "@slack/client": "^4.8.0",
         "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
         "google-play-scraper": "^6.2.0",
         "jimp": "^0.2.28",
