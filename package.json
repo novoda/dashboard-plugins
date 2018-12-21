@@ -12,7 +12,7 @@
         "@slack/client": "^4.8.0",
         "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
         "google-play-scraper": "^6.2.0",
-        "jimp": "^0.2.28",
+        "jimp": "^0.6.0",
         "moment": "^2.22.0",
         "national-rail-darwin": "^1.0.8",
         "request": "^2.88.0",
