@@ -14,7 +14,7 @@
         "google-play-scraper": "^6.2.0",
         "jimp": "^0.2.28",
         "moment": "^2.22.0",
-        "national-rail-darwin": "^1.0.7",
+        "national-rail-darwin": "^1.0.8",
         "request": "^2.88.0",
         "request-promise-native": "^1.0.5",
         "rss-parser": "^2.11.0"
