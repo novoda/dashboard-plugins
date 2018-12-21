@@ -11,7 +11,7 @@
         "@octokit/rest": "^14.0.9",
         "@slack/client": "^4.8.0",
         "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
-        "google-play-scraper": "^6.2.0",
+        "google-play-scraper": "^6.2.2",
         "jimp": "^0.6.0",
         "moment": "^2.22.0",
         "national-rail-darwin": "^1.0.8",
