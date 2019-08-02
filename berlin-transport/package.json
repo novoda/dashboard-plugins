@@ -6,6 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
+    "moment": "^2.24.0",
+    "national-rail-darwin": "^1.0.8",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
     "vbb-hafas": "^6.0.0"
