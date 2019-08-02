@@ -3,7 +3,7 @@ const createHafas = require('vbb-hafas')
 const moment = require('moment')
 
 const generateViewState = (configuration) => {
-    createHafas('my-awesome-program').departures('900000024101', { duration: 10 })
+    createHafas('novoda-dashboard').departures('900000024101', { duration: 10 })
         .then(results => {
             return results.map(result => {
                 return {
