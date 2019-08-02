@@ -8,7 +8,8 @@
     "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
     "national-rail-darwin": "^1.0.7",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.5"
+    "request-promise-native": "^1.0.5",
+    "vbb-client": "^4.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
