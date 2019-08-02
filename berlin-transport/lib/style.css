@@ -1,0 +1,76 @@
+.container {
+    height: 100vh;  
+    background-color: black;
+    overflow: hidden;
+}
+
+.white {
+    color: white;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.callingAt {
+    overflow: hidden;
+    font-size: 2vw;
+    margin-right: 2vw;
+}
+
+.header-text {
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.time-col {
+    width: 15%;
+}
+
+.destination-col {
+    width: 50%;
+}
+
+
+.platform-col {
+    width: 15%;
+}
+
+.expected-col {
+    margin-left: auto;
+}
+
+.text {
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+    background-color: blue;
+    padding-bottom: 1vh;
+}
+
+.headers {
+    display: flex;
+    margin-right: 1vw;
+    margin-left: 1vw;
+}
+
+.separator {
+    height: 0.25vh;
+    width: 100%;
+    background-color: white;
+}
+
+.item {
+    display: flex;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}

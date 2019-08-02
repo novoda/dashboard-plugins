@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="{{{__dirname}}}/style.css">
+<div class="container">
+
+    <div class="header">
+        <div class="header-text white">DEPARTURES - {{stationName}}</div>
+        <div class="headers">
+            <span class="time-col text white">Time</span>
+            <span class="destination-col text white">Destination</span>
+            <span class="platform-col text white">Platform</span>
+            <span class="expected-col text white">Expected</span>
+        </div>
+    </div>
+    <div class="separator"></div>
+
+    {{#departures}}
+    <div class="item">
+        <span class="white text time-col">{{time}}</span>
+        <span class="destination-col">
+            <div class="yellow text">{{destination}}</div>
+            <marquee direction="left" scrollamount="15" class="orange callingAt">{{callingAt}}</marquee>
+        </span>
+        <span class="white text platform-col">{{platform}}</span>
+        <span class="white text expected-col">{{expected}}</span>
+    </div>
+    {{/departures}}
+
+</div>

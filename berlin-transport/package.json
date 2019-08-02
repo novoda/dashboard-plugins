@@ -1,0 +1,23 @@
+{
+  "name": "national-rail",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "dashboard-plugin": "https://github.com/novoda/dashboards/blob/master/plugin/dashboard-plugin-1.0.9.tgz?raw=true",
+    "national-rail-darwin": "^1.0.7",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
