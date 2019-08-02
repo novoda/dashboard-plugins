@@ -3,7 +3,7 @@ const createHafas = require('vbb-hafas')
 const moment = require('moment')
 
 const generateViewState = (configuration) => {
-    createHafas('novoda-dashboard').departures('900000024101', { duration: 10 })
+    return createHafas('novoda-dashboard').departures('900000120014', { duration: 10 })
         .then(results => {
             return results.map(result => {
                 return {
@@ -13,24 +13,19 @@ const generateViewState = (configuration) => {
                 }
             })
         })
-        .then(console.log)
-        .catch(console.error)
-    const rail = new Rail(configuration.darwinToken.value)
-    const stationCode = configuration.stationCode.value
-    return Promise.all([fetchStation(rail, stationCode), fetchStationBoard(rail, stationCode)])
         .then(results => {
-            const departures = results[1].trainServices.map(each => ({
-                destination: each.destination.name,
-                expected: each.etd,
-                time: each.std,
-                platform: each.platform || '-',
-                callingAt: each.subsequentCallingPoints.reduce((acc, curr, index, array) => (acc += ` ${curr.locationName}${index !== array.length - 1 ? ',' : ''}`), "Calling at").toUpperCase()
-            }))
             return {
-                stationName: results[0][0].name,
-                departures: departures
+                stationName: "Grünberger Str./Warschauer Str.",
+                departures: results.map(departure => {
+                    return {
+                        destination: departure.direction,
+                        time: departure.when,
+                        line: departure.line
+                    }
+                })
             }
         })
+        .catch(console.error)
 }
 
 

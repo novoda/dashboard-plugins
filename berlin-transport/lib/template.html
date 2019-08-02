@@ -6,8 +6,7 @@
         <div class="headers">
             <span class="time-col text white">Time</span>
             <span class="destination-col text white">Destination</span>
-            <span class="platform-col text white">Platform</span>
-            <span class="expected-col text white">Expected</span>
+            <span class="platform-col text white">Line</span>
         </div>
     </div>
     <div class="separator"></div>
@@ -17,10 +16,8 @@
         <span class="white text time-col">{{time}}</span>
         <span class="destination-col">
             <div class="yellow text">{{destination}}</div>
-            <marquee direction="left" scrollamount="15" class="orange callingAt">{{callingAt}}</marquee>
         </span>
-        <span class="white text platform-col">{{platform}}</span>
-        <span class="white text expected-col">{{expected}}</span>
+        <span class="white text platform-col">{{line}}</span>
     </div>
     {{/departures}}
 
