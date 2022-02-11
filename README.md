@@ -1,3 +1,5 @@
+# 🛑 THIS REPOSITORY IS OFFICIALLY NO LONGER UNDER MAINTENANCE since 10/02/2022 🛑
+
 A collection of plugins for the dashboard
 
 ## About 
